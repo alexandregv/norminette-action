@@ -1,9 +1,9 @@
-# norminette-action@v2
+# norminette-action@v3
 
 This GitHub Action checks if your code passes the 42School's norminette linter, after each push.  
 See a demo on [alexandregv/norminette-action-demo](https://github.com/alexandregv/norminette-action-demo).
 
-**/!\\ This version (`@v2`) is for Norm version 2, if you want Norm version 3 please use [norminette-action@v3](https://github.com/alexandregv/norminette-action/tree/v3) /!\\**
+**/!\\ This version (`@v3`) is for Norm version 3, if you want Norm version 2 please use [norminette-action@v2](https://github.com/alexandregv/norminette-action/tree/v2) /!\\**
 
 ## Inputs
 
@@ -25,7 +25,7 @@ jobs:
     name: norminette
     steps:
     - uses: actions/checkout@v2
-    - uses: alexandregv/norminette-action@v2
+    - uses: alexandregv/norminette-action@v3
       with:
         flags: '.'
 ```

@@ -12,8 +12,8 @@ inputs:
     default: '.'
 runs:
   using: 'docker'
-  image: 'docker://alexandregv/norminette:v2'
+  image: 'docker://alexandregv/norminette:v3'
   entrypoint: /bin/bash
   args:
     - -c
-    - /usr/src/norminette/norminette.rb ${{ inputs.flags }} | grep -v "Not a valid file" | grep -B1 -E "^Error|Warning"; test $? -eq 1
+    - norminette ${{ inputs.flags }}
