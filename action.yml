@@ -1,0 +1,19 @@
+name: '42 Norminette'
+description: 'Check 42 Norm with norminette linter'
+author: 'Reach <reach@42paris.fr>'
+branding:
+  icon: 'activity'
+  color: 'gray-dark'
+
+inputs:
+  flags:
+    description: 'Flags passed to norminette'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'docker://alexandregv/norminette:v2'
+  entrypoint: /bin/bash
+  args:
+    - -c
+    - /usr/src/norminette/norminette.rb ${{ inputs.flags }} | grep -v "Not a valid file" | grep -B1 -E "^Error|Warning"; test $? -eq 1
