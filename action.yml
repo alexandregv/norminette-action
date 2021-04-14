@@ -17,6 +17,5 @@ runs:
       shell: bash
     - run: python3 -m pip install norminette
       shell: bash
-    - id: Check 42 Norm
-      run: norminette ${{ inputs.flags }}
+    - run: norminette ${{ inputs.flags }}
       shell: bash
