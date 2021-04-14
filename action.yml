@@ -11,9 +11,12 @@ inputs:
     required: true
     default: '.'
 runs:
-  using: 'docker'
-  image: 'docker://alexandregv/norminette:v3'
-  entrypoint: /bin/bash
-  args:
-    - -c
-    - norminette ${{ inputs.flags }}
+  using: "composite"
+  steps:
+    - run: python3 -m pip install --upgrade pip setuptools
+      shell: bash
+    - run: python3 -m pip install norminette
+      shell: bash
+    - id: Check 42 Norm
+      run: norminette ${{ inputs.flags }}
+      shell: bash
