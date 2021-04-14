@@ -22,17 +22,13 @@ on: [push, pull_request]
 jobs:
   norminette_job:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ '3.7', '3.8', '3.9' ]
     name: norminette
     steps:
     - uses: actions/checkout@v2
-    - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+        architecture: 'x64'
     - uses: alexandregv/norminette-action@v3
       with:
         flags: '.'
