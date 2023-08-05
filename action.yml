@@ -12,7 +12,7 @@ inputs:
     default: '.'
 runs:
   using: 'docker'
-  image: 'docker://alexandregv/norminette:v3'
+  image: 'docker://alexandregv/norminette:v3.3.50'
   entrypoint: /bin/bash
   args:
     - -c
