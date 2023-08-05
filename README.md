@@ -3,7 +3,10 @@
 This GitHub Action checks if your code passes the 42School's norminette linter, after each push.  
 See a demo on [alexandregv/norminette-action-demo](https://github.com/alexandregv/norminette-action-demo).
 
-**/!\\ This version (`@v3`) is for Norm version 3, if you want Norm version 2 please use [norminette-action@v2](https://github.com/alexandregv/norminette-action/tree/v2) /!\\**
+/!\\ This Action supports all norminette versions. You should specify the exact version, for example `v3.3.51`. Check your campus rules to find the version you should use.  
+`@v3` always refers to the latest v3.x.y.  
+
+For v2 use [norminette-action@v2](https://github.com/alexandregv/norminette-action/tree/v2)**
 
 ## Inputs
 
