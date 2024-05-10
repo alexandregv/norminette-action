@@ -48,3 +48,6 @@ More infos on [GitHub Docs](https://docs.github.com/en/free-pro-team@latest/acti
 * [norminette-vim](https://github.com/alexandregv/norminette-vim) - Vim integration for norminette. Displays norm errors directly inside Vim.
 
 All of these are compatible with Norm version 2 and 3.
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/alexandregv/norminette-action.svg?variant=adaptive)](https://starchart.cc/alexandregv/norminette-action)
